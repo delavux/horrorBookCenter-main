@@ -1,0 +1,690 @@
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #111111 100%);
+    color: #e0e0e0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo img {
+    height: 50px;
+    filter: drop-shadow(0 0 10px #8c00ff);
+}
+
+.navbar h1 {
+    color: #8c00ff;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(140, 0, 255, 0.5);
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background: #8c00ff;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Botão do bibliotecário */
+.btn-bibliotecario {
+    background: linear-gradient(45deg, #8c00ff, #5c00b5);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(140, 0, 255, 0.3);
+}
+
+.btn-bibliotecario:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(140, 0, 255, 0.4);
+}
+
+.btn-bibliotecario.active {
+    background: linear-gradient(45deg, #00ffc3, #00b894);
+}
+
+/* Catálogo da página inicial */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.catalogo .livro {
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(140, 0, 255, 0.2);
+}
+
+.catalogo .livro:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(140, 0, 255, 0.2);
+}
+
+.catalogo .livro img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.7));
+}
+
+/* Seções de formulário */
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 2rem 0;
+}
+
+.form-container {
+    background: rgba(30, 30, 30, 0.7);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(140, 0, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-container h2 {
+    color: #8c00ff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(140, 0, 255, 0.4);
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(50, 50, 50, 0.9);
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    background: rgba(60, 0, 120, 0.9);
+    box-shadow: 0 0 0 3px rgba(140, 0, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Botões */
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(45deg, #8c00ff, #5c00b5);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(140, 0, 255, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* Botões auxiliares */
+.btn-sucesso {
+    background: linear-gradient(45deg, #00ffc3, #00b894);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-perigo {
+    background: linear-gradient(45deg, #ff0055, #ff3366);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-pequeno {
+    background: #8c00ff;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-solicitar {
+    background: linear-gradient(45deg, #0055ff, #3388ff);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+/* Estados dos botões */
+.btn-sucesso:hover,
+.btn-perigo:hover,
+.btn-pequeno:hover,
+.btn-solicitar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Links do formulário */
+.form-links {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.form-links a {
+    color: #3388ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-links a:hover {
+    color: #0055ff;
+    text-decoration: underline;
+}
+/* Catálogo completo */
+.catalogo-completo {
+    padding: 2rem 0;
+}
+
+.catalogo-completo h2 {
+    color: #e94560;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(233, 69, 96, 0.3);
+}
+
+/* Filtros */
+.filtros {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+/* Lista de livros */
+.lista-livros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.livro-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.livro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.livro-card.indisponivel {
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.livro-imagem {
+    margin-bottom: 1rem;
+}
+
+.livro-imagem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sem-imagem {
+    width: 100%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.livro-info h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.autor {
+    color: #b2bec3;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.livro-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.livro-status.disponivel {
+    background: rgba(0, 184, 148, 0.3);
+    color: #55efc4;
+}
+
+.livro-status.indisponivel {
+    background: rgba(214, 48, 49, 0.3);
+    color: #ff7675;
+}
+/* Painéis de usuário */
+.painel-usuario,
+.painel-bibliotecario {
+    padding: 2rem 0;
+}
+
+.usuario-info,
+.painel-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.usuario-info h2,
+.painel-header h2 {
+    color: #e94560;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(233, 69, 96, 0.3);
+}
+
+.usuario-info p,
+.painel-header p {
+    color: #b2bec3;
+    font-size: 1.2rem;
+}
+
+/* Grid do painel */
+.painel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card h3 {
+    color: #74b9ff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #74b9ff;
+    padding-bottom: 0.5rem;
+}
+
+/* Itens de lista */
+.item-lista {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border-left: 4px solid #e94560;
+}
+
+.item-lista:last-child {
+    margin-bottom: 0;
+}
+
+.item-lista strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.item-lista span {
+    color: #b2bec3;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Sistema de abas */
+.abas {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.aba-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.aba-btn.active {
+    background: linear-gradient(45deg, #e94560, #ff6b8b);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.aba-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.aba-conteudo {
+    display: none;
+}
+
+.aba-conteudo.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Itens administrativos */
+.solicitacao-item,
+.livro-admin-item,
+.devolucao-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solicitacao-info,
+.livro-info,
+.devolucao-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.solicitacao-acoes,
+.livro-acoes,
+.devolucao-acoes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Form de adicionar livro */
+.form-adicionar-livro {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.form-adicionar-livro h4 {
+    color: #74b9ff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.form-adicionar-livro form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+.form-adicionar-livro input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+
+/* Mensagens e estados */
+.mensagem {
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+}
+
+.mensagem.sucesso {
+    background: rgba(0, 184, 148, 0.3);
+    color: #55efc4;
+    border: 1px solid #00b894;
+}
+
+.mensagem.erro {
+    background: rgba(214, 48, 49, 0.3);
+    color: #ff7675;
+    border: 1px solid #d63031;
+}
+
+.sem-dados {
+    text-align: center;
+    color: #b2bec3;
+    font-style: italic;
+    padding: 2rem;
+}
+
+.erro {
+    color: #ff7675;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Status das solicitações */
+.status-pendente {
+    border-left-color: #fdcb6e;
+}
+
+.status-aprovado {
+    border-left-color: #00b894;
+}
+
+.status-negado {
+    border-left-color: #d63031;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .painel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+
+    .filtros input,
+    .filtros select {
+        min-width: 100%;
+    }
+
+    .solicitacao-item,
+    .livro-admin-item,
+    .devolucao-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .abas {
+        justify-content: center;
+    }
+
+    .aba-btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+    }
+
+    .form-adicionar-livro form {
+        flex-direction: column;
+    }
+
+    .form-adicionar-livro input {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 2rem 1rem;
+        margin: 1rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .lista-livros {
+        grid-template-columns: 1fr;
+    }
+}

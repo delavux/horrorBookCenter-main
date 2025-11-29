@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Estudante - HorrorBookCenter</title>
+    <link rel="stylesheet" href="estilos/css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/livroLogo.png" alt="livro">
+        </div>
+
+        <h1>HorrorBookCenter</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="painelestudante.html">Alugar Livros</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bibliotecario-area">
+            <a href="bibliotecario.html" class="btn-bibliotecario">
+                Área do Bibliotecário
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="painel-usuario">
+            <div class="usuario-info">
+                <h2>Bem-vindo, <span id="nomeUsuario">Estudante</span>!</h2>
+                <p>Gerencie seus empréstimos de livros de terror</p>
+            </div>
+
+            <div class="painel-grid">
+                <div class="card">
+                    <h3>Livros Disponíveis</h3>
+                    <div id="livros-disponiveis" class="lista-livros">
+                        <!-- Livros disponíveis serão carregados via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Meus Empréstimos</h3>
+                    <div id="meus-emprestimos" class="lista-emprestimos">
+                        <!-- Empréstimos do usuário serão carregados via JavaScript -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Solicitações Pendentes</h3>
+                    <div id="minhas-solicitacoes" class="lista-solicitacoes">
+                        <!-- Solicitações pendentes serão carregados via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/painelestudante.js"></script>
+</body>
+</html>

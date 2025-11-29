@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros - HorrorBookCenter</title>
+    <link rel="stylesheet" href="estilos/css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/livroLogo.png" alt="livro">
+        </div>
+
+        <h1>HorrorBookCenter</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="painelestudante.html">Alugar Livros</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bibliotecario-area">
+            <a href="bibliotecario.html" class="btn-bibliotecario">
+                Área do Bibliotecário
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="catalogo-completo">
+            <h2>Catálogo Completo de Livros</h2>
+            <div class="filtros">
+                <input type="text" id="buscarLivro" placeholder="Buscar livro...">
+                <select id="filtroDisponibilidade">
+                    <option value="todos">Todos os livros</option>
+                    <option value="disponivel">Disponíveis</option>
+                    <option value="indisponivel">Indisponíveis</option>
+                </select>
+            </div>
+            
+            <div id="lista-livros" class="lista-livros">
+                <!-- Livros serão carregados via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/livros.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Bibliotecário - HorrorBookCenter</title>
+    <link rel="stylesheet" href="estilos/css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/livroLogo.png" alt="livro">
+        </div>
+
+        <h1>HorrorBookCenter</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="painelestudante.html">Alugar Livros</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bibliotecario-area">
+            <a href="bibliotecario.html" class="btn-bibliotecario active">
+                Área do Bibliotecário
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="painel-bibliotecario">
+            <div class="painel-header">
+                <h2>Painel do Bibliotecário</h2>
+                <p>Gerencie livros, solicitações e devoluções</p>
+            </div>
+
+            <div class="abas">
+                <button class="aba-btn active" data-aba="solicitacoes">Solicitações Pendentes</button>
+                <button class="aba-btn" data-aba="livros">Gerenciar Livros</button>
+                <button class="aba-btn" data-aba="devolucoes">Registrar Devoluções</button>
+            </div>
+
+            <div class="conteudo-abas">
+                <!-- Aba: Solicitações Pendentes -->
+                <div id="solicitacoes" class="aba-conteudo active">
+                    <h3>Solicitações de Empréstimo</h3>
+                    <div id="lista-solicitacoes" class="lista-solicitacoes">
+                        <!-- Solicitações serão carregadas via JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Aba: Gerenciar Livros -->
+                <div id="livros" class="aba-conteudo">
+                    <h3>Gerenciar Acervo</h3>
+                    
+                    <div class="form-adicionar-livro">
+                        <h4>Adicionar Novo Livro</h4>
+                        <form id="formAdicionarLivro">
+                            <input type="text" id="tituloLivro" placeholder="Título do livro" required>
+                            <input type="text" id="autorLivro" placeholder="Autor">
+                            <input type="text" id="imagemLivro" placeholder="URL da imagem">
+                            <button type="submit" class="btn-primary">Adicionar Livro</button>
+                        </form>
+                    </div>
+
+                    <div class="lista-livros-admin">
+                        <h4>Livros no Acervo</h4>
+                        <div id="lista-livros-admin">
+                            <!-- Lista de livros para administração -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aba: Registrar Devoluções -->
+                <div id="devolucoes" class="aba-conteudo">
+                    <h3>Registrar Devoluções</h3>
+                    <div id="lista-devolucoes" class="lista-devolucoes">
+                        <!-- Lista de empréstimos ativos para devolução -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/bibliotecario.js"></script>
+</body>
+</html>

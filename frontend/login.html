@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HorrorBookCenter</title>
+    <link rel="stylesheet" href="estilos/css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/livroLogo.png" alt="livro">
+        </div>
+
+        <h1>HorrorBookCenter</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="painelestudante.html">Alugar Livros</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bibliotecario-area">
+            <a href="bibliotecario.html" class="btn-bibliotecario">
+                Área do Bibliotecário
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Login</h2>
+                
+                <form id="formLogin">
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Entrar</button>
+                </form>
+
+                <div class="form-links">
+                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+                </div>
+
+                <div id="mensagem" class="mensagem"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

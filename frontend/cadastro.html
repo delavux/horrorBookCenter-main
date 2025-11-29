@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - HorrorBookCenter</title>
+    <link rel="stylesheet" href="estilos/css.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/livroLogo.png" alt="livro">
+        </div>
+
+        <h1>HorrorBookCenter</h1>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="livros.html">Livros</a></li>
+            <li><a href="painelestudante.html">Alugar Livros</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+
+        <div class="bibliotecario-area">
+            <a href="bibliotecario.html" class="btn-bibliotecario">
+                Área do Bibliotecário
+            </a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="form-section">
+            <div class="form-container">
+                <h2>Criar Nova Conta</h2>
+                
+                <form id="formCadastro">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required minlength="6">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmarSenha">Confirmar Senha:</label>
+                        <input type="password" id="confirmarSenha" name="confirmarSenha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Usuário:</label>
+                        <select id="tipo" name="tipo">
+                            <option value="aluno">Aluno</option>
+                            <option value="bibliotecario">Bibliotecário</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Cadastrar</button>
+                </form>
+
+                <div class="form-links">
+                    <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
+                </div>
+
+                <div id="mensagem" class="mensagem"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
