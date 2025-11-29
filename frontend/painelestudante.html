@@ -12,7 +12,7 @@
             <img src="images/livroLogo.png" alt="livro">
         </div>
 
-        <h1>HorrorBookCenter</h1>
+        <h1>HorrorBookCenter - Estudante</h1>
 
         <ul class="nav-links">
             <li><a href="index.html">Início</a></li>
@@ -23,9 +23,9 @@
         </ul>
 
         <div class="bibliotecario-area">
-            <a href="bibliotecario.html" class="btn-bibliotecario">
-                Área do Bibliotecário
-            </a>
+            <button id="btnLogout" class="btn-logoff">
+                🚪 Sair
+            </button>
         </div>
     </nav>
 
@@ -38,23 +38,23 @@
 
             <div class="painel-grid">
                 <div class="card">
-                    <h3>Livros Disponíveis</h3>
+                    <h3>📚 Livros Disponíveis</h3>
                     <div id="livros-disponiveis" class="lista-livros">
-                        <!-- Livros disponíveis serão carregados via JavaScript -->
+                        <p>Carregando livros disponíveis...</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>Meus Empréstimos</h3>
+                    <h3>📖 Meus Empréstimos</h3>
                     <div id="meus-emprestimos" class="lista-emprestimos">
-                        <!-- Empréstimos do usuário serão carregados via JavaScript -->
+                        <p>Carregando seus empréstimos...</p>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3>Solicitações Pendentes</h3>
+                    <h3>⏳ Solicitações Pendentes</h3>
                     <div id="minhas-solicitacoes" class="lista-solicitacoes">
-                        <!-- Solicitações pendentes serão carregados via JavaScript -->
+                        <p>Carregando suas solicitações...</p>
                     </div>
                 </div>
             </div>
@@ -62,5 +62,6 @@
     </main>
 
     <script src="js/painelestudante.js"></script>
+    <script src="js/controleLogin.js"></script>
 </body>
 </html>

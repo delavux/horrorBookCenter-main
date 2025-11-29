@@ -8,26 +8,29 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <img src="images/livroLogo.png" alt="livro">
-        </div>
+    <div class="logo">
+        <img src="images/livroLogo.png" alt="livro">
+    </div>
 
-        <h1>HorrorBookCenter</h1>
+    <h1>HorrorBookCenter</h1>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="livros.html">Livros</a></li>
-            <li><a href="painelestudante.html">Alugar Livros</a></li>
-            <li><a href="cadastro.html">Cadastro</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
+    <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="livros.html">Livros</a></li>
+        <li><a href="painelestudante.html">Alugar Livros</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
 
-        <div class="bibliotecario-area">
-            <a href="bibliotecario.html" class="btn-bibliotecario">
-                Área do Bibliotecário
-            </a>
-        </div>
-    </nav>
+    <div class="bibliotecario-area">
+        <button id="btnLogout" class="btn-logoff" style="display: none;">
+            🚪 Sair
+        </button>
+        <a href="painelbibliotecario.html" class="btn-bibliotecario">
+            Área do Bibliotecário
+        </a>
+    </div>
+</nav>
 
     <main class="container">
         <section class="form-section">
@@ -76,5 +79,6 @@
     </main>
 
     <script src="js/cadastro.js"></script>
+    <script src="js/controleLogin.js"></script>
 </body>
 </html>

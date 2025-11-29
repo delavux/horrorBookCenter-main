@@ -31,13 +31,23 @@ export default {
     },
 
     async listarPendentes(req, res) {
-        try {
-            const solicitacoes = await Solicitacao.listarPendentes();
-            res.json(solicitacoes);
-        } catch (erro) {
-            res.status(500).json({ erro: "Erro ao buscar solicitações" });
-        }
-    },
+    try {
+        console.log("📋 [CONTROLLER] Listando solicitações pendentes");
+        
+        const solicitacoes = await Solicitacao.listarPendentes();
+        console.log(`✅ [CONTROLLER] ${solicitacoes.length} solicitações encontradas`);
+        
+        // Log detalhado de cada solicitação
+        solicitacoes.forEach((s, index) => {
+            console.log(`   ${index + 1}. ID: ${s.id} | Usuário: ${s.usuario} | Livro: ${s.livro} | Status: ${s.status}`);
+        });
+        
+        res.json(solicitacoes);
+    } catch (erro) {
+        console.error("❌ [CONTROLLER] Erro ao listar solicitações:", erro);
+        res.status(500).json({ erro: "Erro ao buscar solicitações" });
+    }
+},
 
     async atualizarStatus(req, res) {
         try {

@@ -688,3 +688,89 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* Estatísticas rápidas */
+.estatisticas-rapidas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.estatistica-card {
+    background: rgba(233, 69, 96, 0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(233, 69, 96, 0.3);
+}
+
+.estatistica-card h3 {
+    color: #e94560;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.estatistica-card span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* Botão de Logoff */
+.btn-logoff {
+    background: linear-gradient(45deg, #d63031, #ff7675);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(214, 48, 49, 0.3);
+    margin-right: 1rem;
+}
+
+.btn-logoff:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(214, 48, 49, 0.4);
+}
+
+/* Indicador de usuário logado */
+#indicador-usuario {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+/* Estilos para empréstimos e solicitações */
+.emprestimo-ativo {
+    border-left: 4px solid #00b894;
+    background: rgba(0, 184, 148, 0.1);
+}
+
+.solicitacao-pendente {
+    border-left: 4px solid #fdcb6e;
+    background: rgba(253, 203, 110, 0.1);
+}
+
+.livro-info {
+    flex: 1;
+}
+
+.acao-emprestimo {
+    display: flex;
+    align-items: center;
+}
+
+.status-pendente {
+    color: #fdcb6e;
+    font-weight: bold;
+}
+
+.status-aprovado {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.status-negado {
+    color: #d63031;
+    font-weight: bold;
+}

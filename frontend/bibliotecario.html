@@ -34,50 +34,51 @@
             <div class="painel-header">
                 <h2>Painel do Bibliotecário</h2>
                 <p>Gerencie livros, solicitações e devoluções</p>
+                <p><strong id="nome-bibliotecario">Carregando...</strong></p>
             </div>
 
             <div class="abas">
-                <button class="aba-btn active" data-aba="solicitacoes">Solicitações Pendentes</button>
-                <button class="aba-btn" data-aba="livros">Gerenciar Livros</button>
-                <button class="aba-btn" data-aba="devolucoes">Registrar Devoluções</button>
+                <button class="aba-btn active" data-aba="solicitacoes">📋 Solicitações Pendentes</button>
+                <button class="aba-btn" data-aba="livros">📚 Gerenciar Livros</button>
+                <button class="aba-btn" data-aba="devolucoes">📥 Registrar Devoluções</button>
             </div>
 
             <div class="conteudo-abas">
                 <!-- Aba: Solicitações Pendentes -->
                 <div id="solicitacoes" class="aba-conteudo active">
-                    <h3>Solicitações de Empréstimo</h3>
+                    <h3>📋 Solicitações de Empréstimo Pendentes</h3>
                     <div id="lista-solicitacoes" class="lista-solicitacoes">
-                        <!-- Solicitações serão carregadas via JavaScript -->
+                        <p>Carregando solicitações...</p>
                     </div>
                 </div>
 
                 <!-- Aba: Gerenciar Livros -->
                 <div id="livros" class="aba-conteudo">
-                    <h3>Gerenciar Acervo</h3>
+                    <h3>📚 Gerenciar Acervo</h3>
                     
                     <div class="form-adicionar-livro">
-                        <h4>Adicionar Novo Livro</h4>
+                        <h4>➕ Adicionar Novo Livro</h4>
                         <form id="formAdicionarLivro">
                             <input type="text" id="tituloLivro" placeholder="Título do livro" required>
                             <input type="text" id="autorLivro" placeholder="Autor">
-                            <input type="text" id="imagemLivro" placeholder="URL da imagem">
+                            <input type="text" id="imagemLivro" placeholder="URL da imagem (opcional)">
                             <button type="submit" class="btn-primary">Adicionar Livro</button>
                         </form>
                     </div>
 
                     <div class="lista-livros-admin">
-                        <h4>Livros no Acervo</h4>
+                        <h4>📖 Livros no Acervo</h4>
                         <div id="lista-livros-admin">
-                            <!-- Lista de livros para administração -->
+                            <p>Carregando livros...</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Aba: Registrar Devoluções -->
                 <div id="devolucoes" class="aba-conteudo">
-                    <h3>Registrar Devoluções</h3>
+                    <h3>📥 Registrar Devoluções</h3>
                     <div id="lista-devolucoes" class="lista-devolucoes">
-                        <!-- Lista de empréstimos ativos para devolução -->
+                        <p>Carregando empréstimos ativos...</p>
                     </div>
                 </div>
             </div>
@@ -85,5 +86,6 @@
     </main>
 
     <script src="js/bibliotecario.js"></script>
+    <script src="js/controleLogin.js"></script>
 </body>
 </html>
